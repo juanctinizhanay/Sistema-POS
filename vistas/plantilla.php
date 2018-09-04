@@ -40,11 +40,18 @@
   <script src="vistas/dist/js/adminlte.min.js"></script>
 
 </head>
+
+<!--=====================================
+CUERPO DOCUMENTO
+======================================-->
+
 <body class="hold-transition skin-blue  sidebar-mini sidebar-collapse login-page">
-<!-- Site wrapper -->
-<div class="wrapper">
 
   <?php
+
+  if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+
+    echo '<div class="wrapper">';
   
     /*=============================================
     CABEZOTE
@@ -94,9 +101,15 @@
 
     include "modulos/footer.php";
 
-  ?>
+    echo '</div>';
 
-</div>
+  }else{
+
+    include "modulos/login.php";
+
+  }
+
+  ?>
 
 <script src="vistas/js/plantilla.js"></script>
 
