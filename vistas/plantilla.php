@@ -8,6 +8,7 @@
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" href="vistas/img/plantilla/icono-negro.png">
   
   <!--=====================================
   PLUGINS DE CSS
@@ -75,7 +76,15 @@
 
         include "modulos/".$_GET["ruta"].".php";
 
+      }else{
+
+      include "modulos/404.php";
+
       }
+
+    }else{
+
+      include "modulos/inicio.php";
 
     }
 
