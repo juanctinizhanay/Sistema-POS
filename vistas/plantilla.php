@@ -61,7 +61,23 @@
     CONTENIDO
     =============================================*/
 
-    include "modulos/inicio.php";
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "usuarios" ||
+         $_GET["ruta"] == "categorias" ||
+         $_GET["ruta"] == "productos" ||
+         $_GET["ruta"] == "clientes" ||
+         $_GET["ruta"] == "ventas" ||
+         $_GET["ruta"] == "crear-venta" ||
+         $_GET["ruta"] == "reportes" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/".$_GET["ruta"].".php";
+
+      }
+
+    }
 
     /*=============================================
     FOOTER
